@@ -88,5 +88,5 @@ class Ulyssea(object):
         
         W = (1-u)*(gamma*(pF - self.r*self.K_f) + (1-gamma)*(pI- self.r*self.K_i)) - u*(gamma*theta_f*self.r*self.K_f + (1-gamma)*theta_i*self.r*self.K_i)
 
-        return(np.array([1-gamma, diff, W]))
+        return(np.array([1-gamma, diff, W,  (1-(1-self.delta*self.s_f)*self.tau_omega)*wF]))
     
